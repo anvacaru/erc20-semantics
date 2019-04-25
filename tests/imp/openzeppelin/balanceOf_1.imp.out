@@ -1,4 +1,4 @@
-Total supply is 100
+Balance of 1 is 100
 <IMP>
   <ERC20>
     <caller>
@@ -35,6 +35,7 @@ Total supply is 100
     </supply>
   </ERC20>
   <state>
+    a |-> 1
     initialHolder |-> 1
     initialSupply |-> 100
   </state>

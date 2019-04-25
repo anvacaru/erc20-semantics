@@ -1,4 +1,9 @@
+//returns the total amount of tokens
+int initialHolder, initialSupply;
+initialHolder = 1;
+initialSupply = 100;
+
 makeThrowAsPrintTrue;
-makeAccount(1,100);
-makeTotalSupply(100);
+makeAccount(initialHolder, initialSupply);
+makeTotalSupply(initialSupply);
 test.totalSupply();

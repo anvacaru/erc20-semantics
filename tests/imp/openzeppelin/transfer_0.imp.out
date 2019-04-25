@@ -1,8 +1,13 @@
-Total supply is 100
+Changing the caller to 1
+1 is transferring 101 to 2
+THROW
+Balance of 1 is 100
+Balance of 2 is 0
+Allowance of 1 for 2 is 0
 <IMP>
   <ERC20>
     <caller>
-      0
+      1
     </caller>
     <k>
       .
@@ -15,12 +20,33 @@ Total supply is 100
         <balance>
           100
         </balance>
+      </account> <account>
+        <id>
+          2
+        </id>
+        <balance>
+          0
+        </balance>
       </account>
     </accounts>
     <allowances>
       <allowance1>
         <owner>
           1
+        </owner>
+        <spenders>
+          <allow>
+            <spender>
+              2
+            </spender>
+            <amount>
+              0
+            </amount>
+          </allow>
+        </spenders>
+      </allowance1> <allowance1>
+        <owner>
+          2
         </owner>
         <spenders>
           .AllowCellBag
@@ -35,8 +61,14 @@ Total supply is 100
     </supply>
   </ERC20>
   <state>
+    a |-> 0
+    amount |-> 101
+    b |-> 2
+    caller |-> 1
     initialHolder |-> 1
     initialSupply |-> 100
+    recipient |-> 2
+    v |-> 101
   </state>
   <input>
     ListItem ( #buffer ( "" ) )

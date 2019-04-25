@@ -1,11 +1,10 @@
-Total supply is 100
-<IMP>
+Balance of 2 is <IMP>
   <ERC20>
     <caller>
       0
     </caller>
     <k>
-      .
+      balanceOf ( 2 ) ~> #freezerprint(_)_IMP0_ ( ) ~> print ( "\n" ) ;
     </k>
     <accounts>
       <account>
@@ -35,6 +34,8 @@ Total supply is 100
     </supply>
   </ERC20>
   <state>
+    a |-> 2
+    anotherAccount |-> 2
     initialHolder |-> 1
     initialSupply |-> 100
   </state>

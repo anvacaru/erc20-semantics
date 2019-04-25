@@ -1,0 +1,56 @@
+Total supply is 100
+<IMP>
+  <ERC20>
+    <caller>
+      0
+    </caller>
+    <k>
+      .
+    </k>
+    <accounts>
+      <account>
+        <id>
+          1
+        </id>
+        <balance>
+          100
+        </balance>
+      </account>
+    </accounts>
+    <allowances>
+      <allowance1>
+        <owner>
+          1
+        </owner>
+        <spenders>
+          .AllowCellBag
+        </spenders>
+      </allowance1>
+    </allowances>
+    <log>
+      Events:
+    </log>
+    <supply>
+      100
+    </supply>
+  </ERC20>
+  <state>
+    .Map
+  </state>
+  <input>
+    ListItem ( #buffer ( "" ) )
+    ListItem ( "on" )
+    ListItem ( #istream ( 0 ) )
+  </input>
+  <output>
+    ListItem ( #ostream ( 1 ) )
+    ListItem ( "on" )
+    ListItem ( #buffer ( "" ) )
+  </output>
+  <throwAsPrint>
+    true
+  </throwAsPrint>
+  <printStrings>
+    true
+  </printStrings>
+</IMP>

@@ -1,0 +1,4 @@
+makeThrowAsPrintTrue;
+makeAccount(1,100);
+makeTotalSupply(100);
+test.totalSupply();

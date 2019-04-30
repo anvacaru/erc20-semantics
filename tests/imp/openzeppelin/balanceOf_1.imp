@@ -7,5 +7,6 @@ initialSupply  = 100;
 
 makeThrowAsPrintTrue;
 makeAccount(initialHolder, initialSupply);
+makeCaller(initialHolder);
 makeTotalSupply(initialSupply);
 test.balanceOf(initialHolder);

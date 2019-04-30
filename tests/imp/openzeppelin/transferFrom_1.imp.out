@@ -1,13 +1,15 @@
 Changing the caller to 1
-1 is transferring 101 to 2
+1 is approving allowance 100 for 2
+Changing the caller to 2
+2 is transferring 101 from 1 to 3
 THROW
 Balance of 1 is 100
-Balance of 2 is 0
-Allowance of 1 for 2 is 0
+Balance of 3 is 0
+Allowance of 1 for 2 is 100
 <IMP>
   <ERC20>
     <caller>
-      1
+      2
     </caller>
     <k>
       .
@@ -27,6 +29,13 @@ Allowance of 1 for 2 is 0
         <balance>
           0
         </balance>
+      </account> <account>
+        <id>
+          3
+        </id>
+        <balance>
+          0
+        </balance>
       </account>
     </accounts>
     <allowances>
@@ -40,7 +49,7 @@ Allowance of 1 for 2 is 0
               2
             </spender>
             <amount>
-              0
+              100
             </amount>
           </allow>
         </spenders>
@@ -51,22 +60,31 @@ Allowance of 1 for 2 is 0
         <spenders>
           .AllowCellBag
         </spenders>
+      </allowance1> <allowance1>
+        <owner>
+          3
+        </owner>
+        <spenders>
+          .AllowCellBag
+        </spenders>
       </allowance1>
     </allowances>
     <log>
-      Events:
+      Events: Approval ( 1 , 2 , 100 )
     </log>
     <supply>
       100
     </supply>
   </ERC20>
   <state>
+    a |-> 1
     amount |-> 101
-    b |-> 2
-    caller |-> 1
+    b |-> 3
+    caller |-> 2
     initialHolder |-> 1
     initialSupply |-> 100
-    recipient |-> 2
+    spender |-> 2
+    to |-> 3
     v |-> 101
   </state>
   <input>

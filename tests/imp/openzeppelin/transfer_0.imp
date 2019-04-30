@@ -2,7 +2,7 @@
 //when the sender does not have enough balance
 //it should throw
 
-int a, b, v, caller, initialHolder, initialSupply, recipient, amount;
+int b, v, caller, initialHolder, initialSupply, recipient, amount;
 
 initialHolder = 1;
 initialSupply = 100;

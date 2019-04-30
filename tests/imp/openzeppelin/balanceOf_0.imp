@@ -8,5 +8,6 @@ anotherAccount = 2;
 
 makeThrowAsPrintTrue;
 makeAccount(initialHolder, initialSupply);
+makeCaller(initialHolder);
 makeTotalSupply(initialSupply);
 test.balanceOf(anotherAccount);

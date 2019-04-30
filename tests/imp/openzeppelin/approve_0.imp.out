@@ -1,9 +1,5 @@
 Changing the caller to 1
-1 is transferring 101 to 2
-THROW
-Balance of 1 is 100
-Balance of 2 is 0
-Allowance of 1 for 2 is 0
+1 is approving allowance 100 for 2
 <IMP>
   <ERC20>
     <caller>
@@ -40,7 +36,7 @@ Allowance of 1 for 2 is 0
               2
             </spender>
             <amount>
-              0
+              100
             </amount>
           </allow>
         </spenders>
@@ -54,20 +50,20 @@ Allowance of 1 for 2 is 0
       </allowance1>
     </allowances>
     <log>
-      Events:
+      Events: Approval ( 1 , 2 , 100 )
     </log>
     <supply>
       100
     </supply>
   </ERC20>
   <state>
-    amount |-> 101
+    amount |-> 100
     b |-> 2
     caller |-> 1
-    initialHolder |-> 1
-    initialSupply |-> 100
-    recipient |-> 2
-    v |-> 101
+    owner |-> 1
+    spender |-> 2
+    supply |-> 100
+    v |-> 100
   </state>
   <input>
     ListItem ( #buffer ( "" ) )

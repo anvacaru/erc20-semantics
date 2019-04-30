@@ -1,7 +1,10 @@
 //when the recipient is not the zero address
 //when the sender has enough approved balance
 //when the initial holder has enough balance
-//it transfers th requested amount
+//it transfers the requested amount
+//it decreases the spender allowance
+//it emits a transfer event
+//it emits an approval event
 
 int a, b, v, caller, initialHolder, initialSupply, spender, amount, to;
 

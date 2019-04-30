@@ -1,6 +1,6 @@
 //when the recipient is not the zero address
-//when the sender has not enough approved balance
-//when the initialHolder has not enough balance
+//when the sender does not have enough approved balance
+//when the initial holder does not have enough balance
 //it reverts
 
 int a, b, v, caller, initialHolder, initialSupply, spender, amount, to;

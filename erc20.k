@@ -1,4 +1,4 @@
-/* Ahthor: Grigore Rosu
+/* Author: Grigore Rosu
    Date 2 December 2017
 
    ERC20-K is a formalization of the informal ERC20 standard at
@@ -29,21 +29,21 @@ module ERC20
                   <caller> 0 </caller>
                   <k> $PGM:K </k>
                   <accounts>
-                    <account multiplicity="*">
+                    <account multiplicity="*" type="Map">
                       <id> 0 </id>
                       <balance> 0 </balance>
                     </account>
                   </accounts>
                   <allowances>
-                    <allowance1 multiplicity="*">
+                    <ledger multiplicity="*" type="Map">
                       <owner> 0 </owner>
                       <spenders>
-                        <allow multiplicity="*">
+                        <allow multiplicity="*" type="Map">
                           <spender> 0 </spender>
                           <amount> 0 </amount>
                         </allow>
                       </spenders>
-                    </allowance1>
+                    </ledger>
                   </allowances>
                   <log> Events: </log>
                   <supply> 0 </supply>

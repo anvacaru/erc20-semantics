@@ -128,7 +128,7 @@ module IMP
 
   rule <k> makeAccount(A,V) => . ...</k>
        <accounts>... .Bag => <account> <id> A </id> <balance> V </balance> </account> ...</accounts>
-       <allowances>... .Bag => <allowance1> <owner> A </owner> <spenders> .Bag </spenders> </allowance1> ...</allowances>
+       <allowances>... .Bag => <ledger> <owner> A </owner> <spenders> .Bag </spenders> </ledger> ...</allowances>
   rule <k> makeAllowance(A,B) => . ...</k> <owner> A </owner>
        <spenders>... .Bag => <allow> <spender> B </spender> <amount> 0 </amount> </allow> ...</spenders>
   rule <k> makeTotalSupply(I) => . ...</k> <supply> _ => I </supply> requires I >=Int 0

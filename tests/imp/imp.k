@@ -50,7 +50,6 @@ module IMP
    possible/allowed in a normal programming language for smart contracts. */
                 | "makeAccount" "(" AExp "," AExp")"     [strict]
                 | "makeAllowance" "(" AExp "," AExp ")"  [strict]
-                | "makeTotalSupply" "(" AExp ")"         [strict]
                 | "makeCaller" "(" AExp ")"              [strict]
                 | "makeBalance" "(" AExp ")"             [strict]
                 | "makeThrowAsPrintTrue"
@@ -129,9 +128,9 @@ module IMP
   rule <k> makeAccount(A,V) => . ...</k>
        <accounts>... .Bag => <account> <id> A </id> <balance> V </balance> </account> ...</accounts>
        <allowances>... .Bag => <ledger> <owner> A </owner> <spenders> .Bag </spenders> </ledger> ...</allowances>
+       <supply> S:Int => S +Int V </supply>
   rule <k> makeAllowance(A,B) => . ...</k> <owner> A </owner>
        <spenders>... .Bag => <allow> <spender> B </spender> <amount> 0 </amount> </allow> ...</spenders>
-  rule <k> makeTotalSupply(I) => . ...</k> <supply> _ => I </supply> requires I >=Int 0
   rule <k> makeCaller(I:Int) => . ...</k> <caller> _ => I </caller>
   rule <k> makeBalance(I:Int) => . ...</k> <caller> Owner </caller> <id> Owner </id> <balance> _ => I </balance>
   rule <k> makeThrowAsPrintTrue  => . ...</k> <throwAsPrint> _ => true </throwAsPrint>
@@ -181,7 +180,6 @@ while(!(x <= 0)) {
   }
   x = x + -1;
 }
-makeTotalSupply(550);
 caller = 7;
 makeCaller(caller);
 makeThrowAsPrintTrue;
@@ -205,14 +203,6 @@ makeThrowAsPrintTrue;
     print(caller);
     print("\n");
     makeCaller(caller);
-
-  syntax Stmt ::= "test.makeTotalSupply" "(" AExp ")"   [macro]
-  rule test.makeTotalSupply(Value) =>
-    v = Value;
-    print("Changing the total supply to ");
-    print(v);
-    print("\n");
-    makeTotalSupply(v);
 
   syntax Stmt ::= "test.totalSupply" "(" ")"   [macro]
   rule test.totalSupply() =>
